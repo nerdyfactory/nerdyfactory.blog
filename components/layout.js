@@ -27,7 +27,7 @@ const Header = () => {
         "mb-2": !isRoot,
       })}
     >
-      <div className={"max-w-md"}>
+      <div className="max-w-md mb-12">
         {isRoot ? <LargeTitle /> : <SmallTitle />}
       </div>
     </header>
