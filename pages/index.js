@@ -7,7 +7,7 @@ export default function Index({ allPosts }) {
   return (
     <>
       <Layout>
-        <Head>
+        <Head >
           <title>Nerdy Blog</title>
         </Head>
         {allPosts.map((post) => (

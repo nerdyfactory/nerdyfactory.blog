@@ -1,6 +1,9 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image";
+import Logo from '../public/assets/img/nerdyfactory_logo.png'
+import { Fragment } from "react";
 
 export default function Layout({ children }) {
   return (
@@ -19,7 +22,7 @@ const Header = () => {
 
   return (
     <header
-      className={clsx("flex items-center justify-between ", {
+      className={clsx("flex items-center justify-center ", {
         "mb-8": isRoot,
         "mb-2": !isRoot,
       })}
@@ -32,24 +35,26 @@ const Header = () => {
 };
 
 const LargeTitle = () => (
-  <h1>
-    <Link href="/">
+  <Link href="/">
+    <div className="flex flex-col items-center">
+      <img className="flex-auto mb-3" src={Logo} width="50" height="50" />
       <a
         className={clsx(
-          "text-3xl font-black leading-none text-black no-underline font-display",
+          "text-3xl font-black leading-none text-black no-underline font-display  mb-5",
           "sm:text-5xl",
           "dark:text-white"
         )}
       >
         Nerdy Blog
       </a>
-    </Link>
-  </h1>
+    </div>
+  </Link>
 );
 
 const SmallTitle = () => (
-  <h1>
-    <Link href="/">
+  <Link href="/">
+    <div className="flex flex-row items-center justify-center">
+      <img className="flex-auto mr-3" src={Logo} width="30" height="30" />
       <a
         className={clsx(
           "text-2xl font-black text-black no-underline font-display",
@@ -58,6 +63,6 @@ const SmallTitle = () => (
       >
         Nerdy Blog
       </a>
-    </Link>
-  </h1>
+    </div>
+  </Link>
 );
