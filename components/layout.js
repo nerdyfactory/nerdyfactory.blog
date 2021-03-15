@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header
-      className={clsx("flex items-center justify-center ", {
+      className={clsx(`${"flex items-center " + (isRoot ? "justify-center" : "justify-start")}`, {
         "mb-8": isRoot,
         "mb-2": !isRoot,
       })}
@@ -38,15 +38,17 @@ const LargeTitle = () => (
   <Link href="/">
     <div className="flex flex-col items-center">
       <img className="flex-auto mb-3" src={Logo} width="50" height="50" />
-      <a
-        className={clsx(
-          "text-3xl font-black leading-none text-black no-underline font-display  mb-5",
-          "sm:text-5xl",
-          "dark:text-white"
-        )}
-      >
-        Nerdy Blog
-      </a>
+      <h1>
+        <a
+          className={clsx(
+            "nf-title text-3xl font-black leading-none text-black no-underline font-display  mb-5",
+            "sm:text-5xl",
+            "dark:text-white"
+          )}
+        >
+          Nerdy Blog
+        </a>
+      </h1>
     </div>
   </Link>
 );
@@ -55,14 +57,16 @@ const SmallTitle = () => (
   <Link href="/">
     <div className="flex flex-row items-center justify-center">
       <img className="flex-auto mr-3" src={Logo} width="30" height="30" />
-      <a
-        className={clsx(
-          "text-2xl font-black text-black no-underline font-display",
-          "dark:text-white"
-        )}
-      >
-        Nerdy Blog
-      </a>
+      <h1>
+        <a
+          className={clsx(
+            "nf-title text-2xl font-black text-black no-underline font-display",
+            "dark:text-white"
+          )}
+        >
+          Nerdy Blog
+        </a>
+      </h1>
     </div>
   </Link>
 );

@@ -6,6 +6,8 @@ date: "2020-03-16T05:35:07.322Z"
 author:
   name: Ameer Hamza
   picture: "/assets/blog/authors/joe.jpeg"
+  role: "Backend Developer"
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas at amet, vulputate viverra facilisis et fringilla duis convallis."
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---

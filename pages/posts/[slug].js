@@ -3,8 +3,8 @@ import ReactMarkdown from "react-markdown/with-html";
 import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import ErrorPage from "next/error";
-import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
+import PostFooter from "../../components/post-footer";
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
@@ -19,14 +19,13 @@ export default function Post({ post, morePosts, preview }) {
   }
   return (
     <Layout preview={preview}>
-      <Header />
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (
         <>
-          <article className="mb-32">
+          <article className="mb-32 mt-16">
             <Head>
-              <title>
+              <title className="nf-title">
                 {post.title} | Next.js Blog Example with {CMS_NAME}
               </title>
               <meta property="og:image" content={post.ogImage.url} />
@@ -35,7 +34,6 @@ export default function Post({ post, morePosts, preview }) {
               title={post.title}
               coverImage={post.coverImage}
               date={post.date}
-              author={post.author}
             />
             <ReactMarkdown
               className="mb-4 prose lg:prose-lg dark:prose-dark"
@@ -43,7 +41,9 @@ export default function Post({ post, morePosts, preview }) {
               source={post.content}
               renderers={{ code: CodeBlock, image: MarkdownImage }}
             />
-            {/* <PostBody content={post.content} /> */}
+            <PostFooter 
+              author={post.author}
+            />
           </article>
         </>
       )}
