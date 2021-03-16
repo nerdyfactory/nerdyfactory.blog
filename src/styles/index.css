@@ -17,3 +17,7 @@
 .nf-title {
   color: #111F6D;
 }
+
+a {
+  cursor: pointer;
+}

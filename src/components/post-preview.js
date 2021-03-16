@@ -12,7 +12,6 @@ export default function PostPreview({
   technologies,
   slug,
 }) {
-  console.log(`POST TECHS`, technologies)
   return (
     <div className="my-20 shadow-lg rounded-sm">
       <div className="mb-5">
@@ -27,7 +26,7 @@ export default function PostPreview({
       <div className="px-5 pb-5">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <h3 className="w-auto text-3xl mb-3 leading-snug font-semibold nf-title">
-              <span className="hover:underline">{title}</span>
+              <a aria-label={title} className="hover:none">{title}</a>
           </h3>
         </Link>
         <div className="text-lg mb-4">
