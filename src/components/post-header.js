@@ -7,9 +7,10 @@ export default function PostHeader({ title, coverImage, date, technologies }) {
     <>
       <CoverImage title={title} src={coverImage} height={620} width={1240} />
       <div className="my-8 md:mb-10 sm:mx-0">
-        <div className="flex flex-row items-baseline justify-between">
-          <PostTitle>{title}</PostTitle>
-          <div className="flex flex-row w-1/3 h-9 justify-end">
+        <PostTitle>{title}</PostTitle>
+        <div className="flex flex-row items-center">
+          <DateFormatter dateString={date} />
+          <div className="flex flex-row  w-1/3 h-6 justify-start ml-4">
             {technologies?.map(t => (
               <img
               key={t}
@@ -20,7 +21,6 @@ export default function PostHeader({ title, coverImage, date, technologies }) {
               ))}
           </div>
         </div>
-        <DateFormatter dateString={date} />
       </div>
     </>
   )
