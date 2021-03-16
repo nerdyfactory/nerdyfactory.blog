@@ -1,9 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Image from "next/image";
-import Logo from '../public/assets/img/nerdyfactory_logo.png'
-import { Fragment } from "react";
+import Logo from '../../public/assets/img/nerdyfactory_logo.png'
 
 export default function Layout({ children }) {
   return (

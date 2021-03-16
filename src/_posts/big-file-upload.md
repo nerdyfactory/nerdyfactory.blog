@@ -8,6 +8,7 @@ author:
   picture: "/assets/blog/authors/joe.jpeg"
   role: "Backend Developer"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas at amet, vulputate viverra facilisis et fringilla duis convallis."
+technologies: ["nodejs", "react"]
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---

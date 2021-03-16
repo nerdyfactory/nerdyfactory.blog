@@ -5,24 +5,23 @@ import PostPreview from "../components/post-preview";
 
 export default function Index({ allPosts }) {
   return (
-    <>
-      <Layout>
-        <Head>
-          <title>Nerdy Blog</title>
-        </Head>
-        {allPosts.map((post) => (
-          <PostPreview
-            key={post.slug}
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-            slug={post.slug}
-            excerpt={post.excerpt}
-          />
-        ))}
-      </Layout>
-    </>
+    <Layout>
+      <Head>
+        <title>Nerdy Blog</title>
+      </Head>
+      {allPosts.map((post) => (
+        <PostPreview
+          key={post.slug}
+          title={post.title}
+          coverImage={post.coverImage}
+          technologies={post.technologies}
+          date={post.date}
+          author={post.author}
+          slug={post.slug}
+          excerpt={post.excerpt}
+        />
+      ))}
+    </Layout>
   );
 }
 
@@ -33,6 +32,7 @@ export async function getStaticProps() {
     "slug",
     "author",
     "coverImage",
+    "technologies",
     "excerpt",
   ]);
 

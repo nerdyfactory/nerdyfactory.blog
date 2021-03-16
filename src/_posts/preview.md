@@ -1,15 +1,16 @@
 ---
-title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
+title: 'Preview Mode for Static Generation'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/hello-world/cover.jpg'
+coverImage: '/assets/blog/preview/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author:
   name: Ameer Hamza
   picture: "/assets/blog/authors/joe.jpeg"
   role: "Backend Developer"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas at amet, vulputate viverra facilisis et fringilla duis convallis."
+technologies: ["nodejs", "react"]
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/blog/preview/cover.jpg'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

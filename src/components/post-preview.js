@@ -9,8 +9,10 @@ export default function PostPreview({
   date,
   excerpt,
   author,
+  technologies,
   slug,
 }) {
+  console.log(`POST TECHS`, technologies)
   return (
     <div className="my-20 shadow-lg rounded-sm">
       <div className="mb-5">
@@ -23,16 +25,28 @@ export default function PostPreview({
         />
       </div>
       <div className="px-5 pb-5">
-        <h3 className="text-3xl mb-3 leading-snug font-semibold nf-title">
-          <Link as={`/posts/${slug}`} href="/posts/[slug]">
-            <a className="hover:underline">{title}</a>
-          </Link>
-        </h3>
+        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+          <h3 className="w-auto text-3xl mb-3 leading-snug font-semibold nf-title">
+              <span className="hover:underline">{title}</span>
+          </h3>
+        </Link>
         <div className="text-lg mb-4">
           <DateFormatter dateString={date} />
         </div>
         <p className="text-lg leading-relaxed mb-8">{excerpt}</p>
-        <Avatar name={author.name} picture={author.picture} role={author.role} />
+        <div className="flex flex-row items-center justify-between">
+          <Avatar name={author.name} picture={author.picture} role={author.role} />
+          <div className="flex flex-row w-1/3 h-8 justify-end">
+            {technologies?.map(t => (
+              <img
+              key={t}
+              src={`/assets/img/${t}.png`}
+              alt={t}
+              layout="responsive"
+              />
+              ))}
+          </div>
+        </div>
       </div>
     </div>
   );

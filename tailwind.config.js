@@ -26,8 +26,8 @@ module.exports = {
   purge: {
     mode: "all",
     content: [
-      "./components/**/*.{js,ts,jsx,tsx,css}",
-      "./pages/**/*.{js,ts,jsx,tsx}",
+      "./src/components/**/*.{js,ts,jsx,tsx,css}",
+      "./src/pages/**/*.{js,ts,jsx,tsx}",
     ],
     options: {
       safelist: { deep: [/blur$/] },

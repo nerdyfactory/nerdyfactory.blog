@@ -1,4 +1,4 @@
-import Avatar from '../components/avatar'
+import Avatar from './avatar'
 
 export default function PostFooter({ author }) {
   const {name, picture, role, description} = author
