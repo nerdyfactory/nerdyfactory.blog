@@ -5,7 +5,7 @@ coverImage: "/assets/blog/preview/cover.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author:
   name: Ameer Hamza
-  picture: "/assets/blog/authors/joe.jpeg"
+  picture: "/assets/blog/authors/ameer.jpg"
   role: "Backend Developer"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas at amet, vulputate viverra facilisis et fringilla duis convallis."
 technologies: ["nodejs", "react"]
@@ -24,7 +24,7 @@ File upload has two features in our implementation.
 
 **uniqueFileId**:
 
-We declared a global object named `uploads` in the [uploads file](https://github.com/d2x-addup/back-end/blob/84c9d4b3afad2d969fb33a13e70f228e688da103/src/routes/upload.ts#L16). This object will keep track of the uploaded bytes that have been uploaded for a particular file. We identify every file with a unique file name (passed by the frontend) i.e. `<file-size>-<user-id>-<original-file-name>` . The `uploads` object has the following interface.
+We declared a global object named `uploads` in the upload file. This object will keep track of the uploaded bytes that have been uploaded for a particular file. We identify every file with a unique file name (passed by the frontend) i.e. `<file-size>-<user-id>-<original-file-name>` . The `uploads` object has the following interface.
 
 ```javascript
 interface IUploads {
