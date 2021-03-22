@@ -20,13 +20,15 @@ export default function PostPreview({
           title={title}
           src={coverImage}
           height={278}
-          width={556}
+          width={"100%"}
         />
       </div>
       <div className="px-5 pb-5">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <h3 className="w-auto text-3xl mb-3 leading-snug font-semibold nf-title">
-              <a aria-label={title} className="hover:none">{title}</a>
+            <a aria-label={title} className="hover:none">
+              {title}
+            </a>
           </h3>
         </Link>
         <div className="text-lg mb-4">
@@ -34,16 +36,20 @@ export default function PostPreview({
         </div>
         <p className="text-lg leading-relaxed mb-8">{excerpt}</p>
         <div className="flex flex-row items-center justify-between">
-          <Avatar name={author.name} picture={author.picture} role={author.role} />
+          <Avatar
+            name={author.name}
+            picture={author.picture}
+            role={author.role}
+          />
           <div className="flex flex-row w-1/3 h-8 justify-end">
-            {technologies?.map(t => (
+            {technologies?.map((t) => (
               <img
-              key={t}
-              src={`/assets/img/${t}.png`}
-              alt={t}
-              layout="responsive"
+                key={t}
+                src={`/assets/img/${t}.png`}
+                alt={t}
+                layout="responsive"
               />
-              ))}
+            ))}
           </div>
         </div>
       </div>
