@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "nerdyfactory"
+  },
+  "targets": {
+    "nerdyfactory": {
+      "hosting": {
+        "nerdy-blog": [
+          "blog-nerdyfactory"
+        ]
+      }
+    }
   }
 }
