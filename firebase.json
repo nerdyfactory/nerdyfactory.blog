@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "out",
+    "target": "nerdy-blog",
     "ignore": [
       "firebase.json",
       "**/.*",
