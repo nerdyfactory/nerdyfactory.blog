@@ -6,8 +6,8 @@ date: "2020-03-16T05:35:07.322Z"
 author:
   name: Ameer Hamza
   picture: "/assets/blog/authors/ameer.jpg"
-  role: "Backend Developer"
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas at amet, vulputate viverra facilisis et fringilla duis convallis."
+  role: "Software Developer"
+  description: "Software engineer at Nerdyfactory. Node.js, Golang, Postgres, Javascript, React"
 technologies: ["nodejs", "react"]
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
