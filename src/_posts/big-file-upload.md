@@ -42,10 +42,22 @@ We store the uploaded files in the `uploads/` folder. Before user starts uploadi
 
 Three api routes are made for the upload process(used sequencially):
 
-| Route                | Headers                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| -------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| /api/upload/status   | `x-file-name`, `file-size`                  | Check the status of file before upload. We check for **already uploaded file**, **resumed upload** and **new file**. <br><br> **1.** If file exists in the `uploads/` directory that means the file has already been completely uploaded. <br> **2.** If `uniqueFileId` property exists in `uploads` object then that means the file is being resumed and in that case we return the number of bytes that have been uploaded in response to frontend. <br> **3.** If above both cases don't pass then that means we are uploading a new file and we let frontend know in response                |
-| /api/upload/files    | `x-file-name`, `content-range`, `file-size` | In this route we upload the chunk sent from frontend to backend. The upload is done by using a `fileStream`. If user is uploading a new file then we create a `writable file stream` and if it's not then we create a `appendable file stream` in the `tmp/` directory. [content-range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Range) header is used to let the backend know from which byte it should start writing or appending. After successful write or append we update the number of `bytesReceived` in the `uploads` object.                                  |
-| /api/upload/complete | `x-file-name`, `x-orig-file-name`           | This api lets backend do **post-upload** actions. <br><br> **1.** We check the format of the original file name. Original file name format is `{vehicle name}_{timestamp:HHMMSS}_{date:YYMMDD}.dat` // 1_115431_210224.dat <br> **2.** If file name is correct then we create a drive record and attach the respective vehicle with it. Otherwise we simply create a drive record. <br> **3.** We remove the `uniqueFileId` reference from the `uploads` object to mark the file upload complete. <br> **4.** At the end we move the uploaded file from `tmp/` directory to `uploads/` directory |
+### 1. /api/upload/status
+
+**Headers passed** `x-file-name`, `file-size`
+
+Check the status of file before upload. We check for **already uploaded file**, **resumed upload** and **new file**. <br><br> **1.** If file exists in the `uploads/` directory that means the file has already been completely uploaded. <br> **2.** If `uniqueFileId` property exists in `uploads` object then that means the file is being resumed and in that case we return the number of bytes that have been uploaded in response to frontend. <br> **3.** If above both cases don't pass then that means we are uploading a new file and we let frontend know in response
+
+### 2. /api/upload/files
+
+**Headers passed** `x-file-name`, `content-range`, `file-size`
+
+In this route we upload the chunk sent from frontend to backend. The upload is done by using a `fileStream`. If user is uploading a new file then we create a `writable file stream` and if it's not then we create a `appendable file stream` in the `tmp/` directory. [content-range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Range) header is used to let the backend know from which byte it should start writing or appending. After successful write or append we update the number of `bytesReceived` in the `uploads` object.
+
+### 3. /api/upload/complete
+
+**Headers passed** `x-file-name`, `x-orig-file-name`
+
+This api lets backend do **post-upload** actions. <br><br> **1.** We check the format of the original file name. Original file name format is `{vehicle name}_{timestamp:HHMMSS}_{date:YYMMDD}.dat` // 1\*115431_210224.dat <br> **2.** If file name is correct then we create a drive record and attach the respective vehicle with it. Otherwise we simply create a drive record. <br> **3.** We remove the `uniqueFileId` reference from the `uploads` object to mark the file upload complete. <br> **4.** At the end we move the uploaded file from `tmp/` directory to `uploads/` directory
 
 <br><hr>
