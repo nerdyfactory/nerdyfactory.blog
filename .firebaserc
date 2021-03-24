@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "nerdyfactory"
+    "default": "blog-nerdyfactory"
   },
   "targets": {
     "nerdyfactory": {
