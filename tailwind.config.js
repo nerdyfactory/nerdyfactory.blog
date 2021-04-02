@@ -25,10 +25,7 @@ const defaultSerif = [
 module.exports = {
   purge: {
     mode: "all",
-    content: [
-      "./src/components/**/*.{js,ts,jsx,tsx,css}",
-      "./src/pages/**/*.{js,ts,jsx,tsx}",
-    ],
+    content: [".//**/*.{js,ts,jsx,tsx,css}", "./pages/**/*.{js,ts,jsx,tsx}"],
     options: {
       safelist: { deep: [/blur$/] },
     },

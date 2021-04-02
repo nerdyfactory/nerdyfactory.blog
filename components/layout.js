@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Logo from '../../public/assets/img/nerdyfactory_logo.png'
+import Logo from "../public/assets/img/nerdyfactory_logo.png";
 
 export default function Layout({ children }) {
   return (
@@ -20,10 +20,15 @@ const Header = () => {
 
   return (
     <header
-      className={clsx(`${"flex items-center " + (isRoot ? "justify-center" : "justify-start")}`, {
-        "mb-8": isRoot,
-        "mb-2": !isRoot,
-      })}
+      className={clsx(
+        `${
+          "flex items-center " + (isRoot ? "justify-center" : "justify-start")
+        }`,
+        {
+          "mb-8": isRoot,
+          "mb-2": !isRoot,
+        }
+      )}
     >
       <div className="max-w-md mb-12">
         {isRoot ? <LargeTitle /> : <SmallTitle />}
