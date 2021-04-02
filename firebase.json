@@ -6,7 +6,7 @@
     "appAssociation": "AUTO", 
     "rewrites": [
       {
-        "source": "/src/posts/**",
+        "source": "/posts/**",
         "dynamicLinks": true
       }
     ]
