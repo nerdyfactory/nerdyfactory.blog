@@ -2,8 +2,12 @@
   "hosting": {
     "public": "out",
     "target": "nerdy-blog",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "appAssociation": "AUTO", 
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "appAssociation": "AUTO",
     "rewrites": [
       {
         "source": "/posts/**",
