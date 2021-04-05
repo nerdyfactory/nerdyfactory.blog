@@ -6,8 +6,7 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "predeploy": "npm run clean && next build",
-    "deploy": "firebase deploy"
+    "deploy": "yarn build && yarn export && firebase deploy"
   },
   "dependencies": {
     "firebase": "^7.22.0",
