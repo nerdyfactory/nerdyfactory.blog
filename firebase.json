@@ -1,7 +1,8 @@
 {
   "hosting": {
     "public": "out",
-    "target": "nerdy-blog",
+    "cleanUrls": true,
+    "site": "blog-nerdyfactory",
     "ignore": [
       "firebase.json",
       "**/.*",
