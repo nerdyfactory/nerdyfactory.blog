@@ -5,9 +5,14 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "predeploy": "npm run clean && next build",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
+    "firebase": "^7.22.0",
+    "firebase-admin": "^8.13.0",
+    "firebase-functions": "^3.11.0",
     "classnames": "2.2.6",
     "clsx": "^1.1.1",
     "date-fns": "2.16.1",
@@ -29,6 +34,7 @@
     "typeface-open-sans": "^1.1.13"
   },
   "devDependencies": {
+    "firebase-functions-test": "^0.2.2",
     "@fullhuman/postcss-purgecss": "^4.0.2",
     "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.2.5",

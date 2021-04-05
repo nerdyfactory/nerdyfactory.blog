@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "out",
+    "cleanUrls": true,
     "target": "nerdy-blog",
     "ignore": [
       "firebase.json",
@@ -10,8 +11,8 @@
     "appAssociation": "AUTO",
     "rewrites": [
       {
-        "source": "/posts/**",
-        "dynamicLinks": true
+        "source": "**",
+        "function": "nextjs-server"
       }
     ]
   }
