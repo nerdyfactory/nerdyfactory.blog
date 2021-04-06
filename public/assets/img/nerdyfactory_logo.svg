@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="89.7265625%" y1="74.9165655%" x2="16.078125%" y2="33.5027306%" id="linearGradient-1">
+            <stop stop-color="#1F3692" offset="0%"></stop>
+            <stop stop-color="#111E6C" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="89.7265625%" y1="74.9165655%" x2="23.2457468%" y2="30.805674%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.8" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="circle-02">
+            <g id="Group-2">
+                <circle id="Oval-2" fill="url(#linearGradient-1)" cx="300" cy="300" r="300"></circle>
+                <g id="Group" transform="translate(185.000000, 179.000000)" fill="url(#linearGradient-2)">
+                    <rect id="Rectangle-3-Copy-14" transform="translate(24.462821, 122.159473) scale(1, -1) translate(-24.462821, -122.159473) " x="1.14427861" y="12.3705795" width="46.6370846" height="219.577787"></rect>
+                    <path d="M183.265839,111.143787 C180.051055,76.5574326 150.948663,49.4823181 115.52254,49.4823181 C80.0964175,49.4823181 50.9940263,76.5574326 47.779242,111.143787 L47.7936777,111.143787 L47.7936777,231.756937 L1.15659309,231.756937 L1.15659309,111.143787 L1.14090017,111.143787 C2.87911819,49.46575 53.4241569,0 115.52254,0 C177.620924,0 228.165963,49.46575 229.90418,111.143774 L229.888624,111.143787 L229.888624,231.756937 L183.251539,231.756937 L183.251539,111.143787 L183.265839,111.143787 Z" id="Combined-Shape-Copy-7"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
