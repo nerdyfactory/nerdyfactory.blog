@@ -9,12 +9,12 @@
     "deploy": "yarn build && yarn export && firebase deploy"
   },
   "dependencies": {
-    "firebase": "^7.22.0",
-    "firebase-admin": "^8.13.0",
-    "firebase-functions": "^3.11.0",
     "classnames": "2.2.6",
     "clsx": "^1.1.1",
     "date-fns": "2.16.1",
+    "firebase": "^7.22.0",
+    "firebase-admin": "^8.13.0",
+    "firebase-functions": "^3.11.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "lqip-loader": "^2.2.1",
@@ -28,15 +28,14 @@
     "react-syntax-highlighter": "^15.4.3",
     "react-toggle-dark-mode": "^1.0.3",
     "remark": "13.0.0",
-    "remark-html": "13.0.1",
     "typeface-lato": "^1.1.13",
     "typeface-open-sans": "^1.1.13"
   },
   "devDependencies": {
-    "firebase-functions-test": "^0.2.2",
     "@fullhuman/postcss-purgecss": "^4.0.2",
     "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.2.5",
+    "firebase-functions-test": "^0.2.2",
     "gray-matter": "^4.0.2",
     "postcss": "^8.2.4",
     "postcss-import": "^14.0.0",

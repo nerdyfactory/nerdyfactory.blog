@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
-import ReactMarkdown from "react-markdown/with-html";
-import style from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import ReactMarkdown from "react-markdown";
+import CodeBlock from "../../components/CodeBlock";
 import ErrorPage from "next/error";
 import PostHeader from "../../components/post-header";
 import PostFooter from "../../components/post-footer";
@@ -9,8 +8,6 @@ import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
-import { CMS_NAME } from "../../lib/constants";
-import markdownToHtml from "../../lib/markdownToHtml";
 import config from "../../config";
 
 export default function Post({ post, preview }) {
@@ -40,7 +37,10 @@ export default function Post({ post, preview }) {
               className="mb-4 prose lg:prose-lg dark:prose-dark"
               escapeHtml={false}
               source={post.content}
-              renderers={{ code: CodeBlock, image: MarkdownImage }}
+              renderers={{
+                code: CodeBlock,
+                image: MarkdownImage,
+              }}
             />
             <PostFooter author={post.author} />
           </article>
@@ -61,13 +61,11 @@ export async function getStaticProps({ params }) {
     "coverImage",
     "technologies",
   ]);
-  const content = await markdownToHtml(post.content || "");
 
   return {
     props: {
       post: {
         ...post,
-        content,
       },
     },
   };
@@ -87,14 +85,6 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-
-const CodeBlock = ({ language, value }) => {
-  return (
-    <SyntaxHighlighter style={style} language={language}>
-      {value}
-    </SyntaxHighlighter>
-  );
-};
 
 const MarkdownImage = ({ alt, src }) => (
   <Image
