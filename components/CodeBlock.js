@@ -37,7 +37,6 @@ const CodeBlock = ({ language, value }) => {
       style={dracula}
       customStyle={{ fontSize: "15px" }}
       lineProps={{ style: { wordBreak: "break-all", whiteSpace: "pre-wrap" } }}
-      showLineNumbers={true}
     >
       {value}
     </SyntaxHighlighter>
