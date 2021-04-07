@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Logo from "../public/assets/img/nerdyfactory_logo.png";
+import Logo from "../public/assets/img/nerdyfactory_logo.svg";
 
 export default function Layout({ children }) {
   return (

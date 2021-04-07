@@ -52,14 +52,14 @@ ogImage:
 ## Project Structure
 
 - `public/`: Public folder
-- `src/`: source codes
-  - `src/_posts/`: Markdown files for all your posts
-  - `src/components`: Shared components between pages
-  - `src/lib`: Shared library files
-  - `src/pages`: Pages of app (They also make the routes of the app)
-  - `src/styles`: App styles
+- `_posts/`: Markdown files for all your posts
+- `components/`: Shared components between pages
+- `lib/`: Shared library files
+- `pages/`: Pages of app (They also make the routes of the app)
+- `styles/`: App styles
 - `READ.md`: this file
 - `package.json`: node dependencies and command scripts
 - `next.config.js`: next configuration
 - `tailwind.config.js`: Tailwind configuration for styling
 - `postcss.config.js`: config for post css (Operations like purge css are configured here)
+- `config.json`: general config

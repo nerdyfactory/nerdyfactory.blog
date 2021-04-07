@@ -11,6 +11,7 @@ import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
+import config from "../../config";
 
 export default function Post({ post, preview }) {
   const router = useRouter();
@@ -25,10 +26,9 @@ export default function Post({ post, preview }) {
         <>
           <article className="mb-32 mt-16">
             <Head>
-              <title className="nf-title">
-                {post.title} | Next.js Blog Example with {CMS_NAME}
-              </title>
+              <title className="nf-title">{post.title}</title>
               <meta property="og:image" content={post.ogImage.url} />
+              <meta name="description" content={config.description} />
             </Head>
             <PostHeader
               title={post.title}
@@ -42,9 +42,7 @@ export default function Post({ post, preview }) {
               source={post.content}
               renderers={{ code: CodeBlock, image: MarkdownImage }}
             />
-            <PostFooter 
-              author={post.author}
-            />
+            <PostFooter author={post.author} />
           </article>
         </>
       )}
